@@ -1,0 +1,19 @@
+package practiceDsa.java;
+
+public class findMaximumNumUseRecursion {
+
+	public static void main(String[] args) {
+		int []a= {1,100,4,5,6};
+		int n= a.length;
+		int result=findMaxRecursion(a,n);
+System.out.println(result);
+	}
+
+	private static int findMaxRecursion(int[] a, int n) {
+		if(n == 1)
+        return a[0];
+
+        return Math.max(a[n-1], findMaxRecursion(a, n-1));
+    }
+
+	}

@@ -1,0 +1,31 @@
+ 
+        import java.util.*;
+public class boundary{
+     
+
+public static void main(String args[])
+    {
+        int arr[][] = { { 1, 2, 3, 4 },{ 1, 2, 3, 4 },
+                        { 1, 2, 3, 4 },{ 1, 2, 3, 4 } };
+
+        diagonalBoundarySum(arr);
+
+    }
+       
+    static void diagonalBoundarySum(int arr[][]){
+        int requiredS=0;
+          int N = 4;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (i == j || (i + j) == N - 1) {
+                    requiredSum += arr[i][j];
+               }
+                else if (i == 0 || j == 0 || i == N - 1|| j == N - 1) {
+                    requiredSum += arr[i][j];
+                }
+            }
+        }
+
+       System.out.println(requiredSum);
+    }
+}
